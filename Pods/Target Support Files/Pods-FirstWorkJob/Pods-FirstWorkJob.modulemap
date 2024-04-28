@@ -1,0 +1,6 @@
+framework module Pods_FirstWorkJob {
+  umbrella header "Pods-FirstWorkJob-umbrella.h"
+
+  export *
+  module * { export * }
+}

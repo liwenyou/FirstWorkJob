@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161835C0288E062051793765 /* Pods_FirstWorkJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06867D9FD00916BE8C738B97 /* Pods_FirstWorkJob.framework */; };
 		9376D5612BDDD89A00C5D695 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376D5602BDDD89A00C5D695 /* NumberCell.swift */; };
 		93AABBA92BDD30C700B148D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AABBA82BDD30C700B148D7 /* AppDelegate.swift */; };
 		93AABBAB2BDD30C700B148D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AABBAA2BDD30C700B148D7 /* SceneDelegate.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06867D9FD00916BE8C738B97 /* Pods_FirstWorkJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstWorkJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89854EE0E19C5661BEF7CB96 /* Pods-FirstWorkJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstWorkJob.debug.xcconfig"; path = "Target Support Files/Pods-FirstWorkJob/Pods-FirstWorkJob.debug.xcconfig"; sourceTree = "<group>"; };
+		8E4A15B9FEE5FE158FDA48D3 /* Pods-FirstWorkJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstWorkJob.release.xcconfig"; path = "Target Support Files/Pods-FirstWorkJob/Pods-FirstWorkJob.release.xcconfig"; sourceTree = "<group>"; };
 		9376D5602BDDD89A00C5D695 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		93AABBA52BDD30C700B148D7 /* FirstWorkJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstWorkJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AABBA82BDD30C700B148D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161835C0288E062051793765 /* Pods_FirstWorkJob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64BFA20B4790840F5D417EFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06867D9FD00916BE8C738B97 /* Pods_FirstWorkJob.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93AABB9C2BDD30C700B148D7 = {
 			isa = PBXGroup;
 			children = (
 				93AABBA72BDD30C700B148D7 /* FirstWorkJob */,
 				93AABBA62BDD30C700B148D7 /* Products */,
+				DCC420378BC9FF483C98EC36 /* Pods */,
+				64BFA20B4790840F5D417EFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,15 @@
 			path = FirstWorkJob;
 			sourceTree = "<group>";
 		};
+		DCC420378BC9FF483C98EC36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89854EE0E19C5661BEF7CB96 /* Pods-FirstWorkJob.debug.xcconfig */,
+				8E4A15B9FEE5FE158FDA48D3 /* Pods-FirstWorkJob.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93AABBB92BDD30C800B148D7 /* Build configuration list for PBXNativeTarget "FirstWorkJob" */;
 			buildPhases = (
+				F2B2E478C9A551504F867790 /* [CP] Check Pods Manifest.lock */,
 				93AABBA12BDD30C700B148D7 /* Sources */,
 				93AABBA22BDD30C700B148D7 /* Frameworks */,
 				93AABBA32BDD30C700B148D7 /* Resources */,
@@ -135,6 +160,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F2B2E478C9A551504F867790 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstWorkJob-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93AABBA12BDD30C700B148D7 /* Sources */ = {
@@ -291,14 +341,17 @@
 		};
 		93AABBBA2BDD30C800B148D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89854EE0E19C5661BEF7CB96 /* Pods-FirstWorkJob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TARPWKMCQK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirstWorkJob/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FirstWorkJob;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -312,9 +365,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenyouLi.FirstWorkJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -323,14 +378,17 @@
 		};
 		93AABBBB2BDD30C800B148D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E4A15B9FEE5FE158FDA48D3 /* Pods-FirstWorkJob.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TARPWKMCQK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirstWorkJob/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FirstWorkJob;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -344,9 +402,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wenyouLi.FirstWorkJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
